@@ -1,0 +1,15 @@
+<script type="text/javascript">
+	const person = {
+		name:'sudheer',
+		age:32,
+		details:function(){
+			return this.name;
+		}
+	}
+	const member = {
+		name:'hacker',
+		age:32
+	}
+	const bind_details_function = person.details.bind(member);
+	document.write(bind_details_function());
+</script>

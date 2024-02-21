@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript class</title>
+</head>
+<body>
+	<div>
+		<p id="demo"></p>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	class car{
+		constructor(name,price){
+			this.name=name;
+			this.price=price;
+		}
+		color(){
+			let color = 'yellow'
+			return color;
+		}
+		age(year){
+			let date = new Date();
+			return date.getFullYear()-year;
+		}
+	}
+	const car1 = new car('Audi','1991');
+	document.getElementById('demo').innerHTML=car1.name+ ' ' +car1.price;
+	document.getElementById('demo1').innerHTML=car1.color();
+	document.getElementById('demo2').innerHTML=car1.age(1991);
+</script>

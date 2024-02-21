@@ -1,0 +1,6 @@
+<?php
+	$fname=array("Peter","Ben","Joe");
+	$age=array("35","37","43");
+	$result = array_combine($fname, $age);
+	echo '<pre>';print_r($result);
+?>

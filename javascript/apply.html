@@ -1,0 +1,14 @@
+<script type="text/javascript">
+	const person = {
+		name : 'sudheer',
+		age : 32,
+		details : function(state,country){
+			return this.name + ' your age is ' + this.age + ' years from '+ state + ' state in ' + country;
+		}
+	}
+	const person2 = {
+		name : 'hacker',
+		age : 32
+	}
+	document.write(person.details.apply(person2,['hyderabad','india']));
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript inheritance</title>
+</head>
+<body>
+	<div id="demo"></div>
+	<div id="demo1"></div>
+	<div id="demo2"></div>
+	<script type="text/javascript">
+		class car{
+			constructor(color){
+				this.color = color;
+			}
+			shade(){
+				return this.color;
+			}
+		}
+		class audi extends car{
+			constructor(color,brand){
+				super();
+				this.color=color;
+				this.brand=brand;
+			}
+			price(){
+				return this.price = 100;
+			}
+			car_details(){
+				return this.color + ' ' + this.brand;
+			}
+		}
+		const car_audi = new audi('Green');
+		const car_audi2 = new audi('Yellow','Volkswagen');
+		document.getElementById('demo').innerHTML = car_audi.shade();
+		document.getElementById('demo1').innerHTML = car_audi.price();
+		document.getElementById('demo2').innerHTML = car_audi2.car_details();
+	</script>
+</body>
+</html>

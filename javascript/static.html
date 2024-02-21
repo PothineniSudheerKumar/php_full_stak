@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript static</title>
+</head>
+<body>
+	<div>
+		<p id="demo"></p>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+	</div>
+	<script type="text/javascript">
+		class car{
+			constructor(name){
+				this.name=name;
+			}
+			static price(){
+				return this.price=1000;
+			}
+			static price2(car){
+				let price = 1000;
+				return car.name + ' car price is INR ' + this.price;
+			}
+			model(){
+				return this.name;
+			}
+		}
+		const car1 = new car('Audi');
+		document.getElementById('demo').innerHTML=car1.model();
+		document.getElementById('demo1').innerHTML=car.price();
+		document.getElementById('demo2').innerHTML=car.price2(car1);
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<script type="text/javascript">
+
+	// javascript object sudheer
+	const sudheer = {
+		name : 'pothineni sudheer kumar',
+		age : 32,
+		job : 'software engineer',
+		company : 'texas review',
+		location : 'jubilee hills',
+		full_name : function(city,state){
+			return this.name + ' is from ' + city + ' in ' + state;
+		},
+		occupation : function(){
+			return this.job;
+		},
+		company : function(){
+			return this.company;
+		},
+		location : function(){
+			return this.location;
+		}
+	}
+
+	// javascript object hacker
+	const hacker = {
+		name : 'ethical hacker',
+		age : '2 days',
+		job : 'full stack developer',
+		company : 'freelancer',
+		location : 'yusufguda'
+	}
+	console.log(sudheer);
+	document.write(sudheer.full_name('hyderabad','telanagana'));
+	document.write('</br></br>');
+
+	// javascript call 
+	document.write(sudheer.full_name.call(hacker));
+	document.write('</br></br>');
+
+	// javascript call with arguments
+	document.write(sudheer.full_name.call(hacker,'hyderabad','telanagana'));
+
+</script>
